@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 const authorSchema = mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     bio: {
         type: String,

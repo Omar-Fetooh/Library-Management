@@ -1,6 +1,7 @@
 import express from 'express'
 import './database/db.Connection.js'
 import bookRouter from './src/modules/book/book.routes.js'
+import authorRouter from './src/modules/author/author.routes.js'
 
 process.on('uncaughtException', (err) => {
     console.log('error')
@@ -12,7 +13,7 @@ app.use(express.json())
 
 
 app.use('/books', bookRouter)
-
+app.use('/authors', authorRouter)
 
 app.use('*', (req, res, next) => {
     next(new AppError(`${req.originalUrl}  Not found`, 404))
