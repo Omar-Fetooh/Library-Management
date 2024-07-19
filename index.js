@@ -1,12 +1,18 @@
 import express from 'express'
+import './database/db.Connection.js'
+import bookRouter from './src/modules/book/book.routes.js'
+
+process.on('uncaughtException', (err) => {
+    console.log('error')
+})
 const app = express()
 const port = 3000
 
 app.use(express.json())
 
-process.on('uncaughtException', (err) => {
-    console.log('error')
-})
+
+app.use('/books', bookRouter)
+
 
 app.use('*', (req, res, next) => {
     next(new AppError(`${req.originalUrl}  Not found`, 404))
