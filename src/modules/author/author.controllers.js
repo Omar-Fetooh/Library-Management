@@ -31,3 +31,16 @@ export const deleteAuthorById = catchAsyncHandler(async (req, res) => {
 
     res.json({ message: "Author Deleted Successfully" })
 })
+
+export const filterAuthors = catchAsyncHandler(async (req, res) => {
+    const { name, bio } = req.query;
+
+    const filter = {}
+
+    if (name) filter.name = name
+    if (bio) filter.bio = bio
+
+    const authors = await Author.find(filter);
+
+    res.json({ message: authors })
+})

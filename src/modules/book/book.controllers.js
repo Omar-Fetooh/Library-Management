@@ -34,3 +34,16 @@ export const deleteBookById = catchAsyncHandler(async (req, res) => {
 
     res.json({ message: "Book Deleted Successfully" })
 })
+
+export const filterBooks = catchAsyncHandler(async (req, res) => {
+    const { title, author } = req.query;
+
+    const filter = {}
+
+    if (title) filter.title = title
+    if (author) filter.author = author
+
+    const books = await Book.find(filter);
+
+    res.json({ message: books })
+})
