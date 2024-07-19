@@ -11,19 +11,19 @@ a simple library project for handling books and authors information
 - Mongoose
 
 ## Books APIs
-- Add Book: `POST/books`   ✅
-- Get All books:`GET/authors`  ✅
-- Update Book By Id:`PATCH/books/:bookId`  ✅
-- Get Book By Id:`GET/books/:bookId`  ✅
-- Delete  Book By Id: `DELETE/books/:bookId`    ✅
-- filter Books: `GET/books/filters`     ✅
+- Add Book:     `POST/books`   ✅
+- Get All books:    `GET/authors`  ✅
+- Update Book By Id:    `PATCH/books/:bookId`  ✅
+- Get Book By Id:   `GET/books/:bookId`  ✅
+- Delete  Book By Id:    `DELETE/books/:bookId`    ✅
+- filter Books:     `GET/books/filters`     ✅
 
 ## Authors APIs
-- Add Author : `POST/authors`  ✅
-- Get All Authors: `GET/authors` ✅
-- Update Author By Id:  `PATCH/authors/:authorId` ✅
-- Get Author By Id: `GET/authors/:authorId`  ✅
-- Delete  Author By Id: `DELETE/authors/:authorId`  ✅
+- Add Author :   `POST/authors`  ✅
+- Get All Authors:   `GET/authors` ✅
+- Update Author By Id:    `PATCH/authors/:authorId` ✅
+- Get Author By Id:     `GET/authors/:authorId`  ✅
+- Delete  Author By Id:     `DELETE/authors/:authorId`  ✅
 - filter Author:  `GET/authors/filters`    ✅
 
 
